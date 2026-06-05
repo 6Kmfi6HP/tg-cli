@@ -1,0 +1,57 @@
+{
+  "name": "tg-cli",
+  "version": "1.0.0",
+  "description": "🚀 Full-featured Telegram CLI powered by GramJS — read, send, forward, search, and manage chats from the terminal",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "tg": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "start": "node dist/index.js",
+    "postinstall": "echo 'Run \"tg auth\" to set up your Telegram API credentials'"
+  },
+  "keywords": [
+    "telegram",
+    "cli",
+    "messaging",
+    "chat",
+    "gramjs",
+    "mtproto",
+    "forward",
+    "search",
+    "telegram-cli"
+  ],
+  "author": "gyue",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6Kmfi6HP/tg-cli.git"
+  },
+  "homepage": "https://github.com/6Kmfi6HP/tg-cli#readme",
+  "bugs": {
+    "url": "https://github.com/6Kmfi6HP/tg-cli/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "big-integer": "^1.6.52",
+    "chalk": "^5.6.2",
+    "commander": "^12.1.0",
+    "json5": "^2.2.3",
+    "ora": "^8.2.0",
+    "telegram": "^2.26.22"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
+}
